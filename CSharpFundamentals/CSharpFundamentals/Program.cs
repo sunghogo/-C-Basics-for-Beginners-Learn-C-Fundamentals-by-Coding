@@ -138,6 +138,23 @@ C:\folder3\folder4
             MakeOld(person);
             Console.WriteLine(person);
 
+            // Random Class
+            var random = new Random();
+
+            const int passwordLength = 10;
+            char[] buffer = new char[passwordLength];
+
+            for (int i = 0; i < passwordLength; i++)
+            {
+                // Generate random int within specified argument range
+                buffer[i] = ((char)('a' + random.Next(0,26)));
+                Console.Write((char)random.Next((int)'a', (int)'z'));
+            }
+            Console.WriteLine();
+
+            var password = new string(buffer);
+            Console.WriteLine(password);
+
 
 
         }
